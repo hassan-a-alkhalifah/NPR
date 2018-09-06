@@ -1,0 +1,104 @@
+
+.header-container-container {
+  width: 100%;
+  background-color: #ffffff;
+  padding-left: 12px;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+.header-left-container {
+  height: 125px;
+  img {
+    margin-top: 14px;
+  }
+  ul {
+    padding-left: 0;
+    display: block;
+  }
+  li {
+    @include listStyle(20px);
+  }
+} // header-left-container end
+
+.header-right-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 320px;
+    .nav-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: baseline;
+    }
+    .nav-item {
+    @include listStyle(12px);
+    padding-top: 0;
+      img, p {
+      display: inline;
+      vertical-align: middle
+      }
+      &:nth-child(4) {
+        padding-left: 0;
+      }
+    }
+} // header-right-container end
+
+.station-select-container {
+  width: 300px;
+  background-color: #f4f4f4;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  z-index: 1;
+  position: fixed;
+  right: 165px;
+  .station-select-top {
+    padding: 0 33px 10px 15px;
+    div {
+      padding-top: 15px;
+      display: inline-block;
+    }
+    p {
+      margin: 0;
+      &:nth-child(1) {
+        font-size: 14px;
+        font-weight: 700;
+      }
+      &:nth-child(2) {
+        font-size: 10px;
+      }
+    }
+  }
+  .station-select-bottom {
+    display: flex;
+    text-align: center;
+    div {
+      display: flex;
+      align-content: center;
+      flex-grow: 1;
+      width: (100% / 3);
+      display: inline-block;
+      background-image: linear-gradient(#FEFEFE, #ECECEC);
+      height: 43px;
+      font-size: 13px;
+      font-family:"Knockout 31 4r", HelveticaNeue-CondensedBold, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      &:nth-child(1) {
+        border-bottom-left-radius: 4px;
+      }
+      &:nth-child(2) {
+        border-left: 1px solid #e0e0e0;
+        border-right: 1px solid #e0e0e0;
+      }
+      &:nth-child(3) {
+        border-bottom-right-radius: 4px;
+      }
+    }
+  }
+}

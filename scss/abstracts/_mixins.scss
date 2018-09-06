@@ -1,0 +1,10 @@
+@mixin listStyle($fontSize) {
+  display: inline;
+  color: #2C63AE;
+  font-size: $fontSize;
+  cursor: pointer;
+  padding: 12px;
+  &:hover {
+    color: #BCCAE5;
+  }
+}
